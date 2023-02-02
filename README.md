@@ -27,6 +27,14 @@ Status bar: Polybar
 
 ## Others
 
-**Credits**: S4vitar, xJackSx and adi1090x
+### Credits
+S4vitar, xJackSx and adi1090x, D3Ext
+
+### Change Neofetch ASCII Arte
+
+```bash
+sudo nano ~/.config/bin/14wual.txt
+# Paste your ASCII Art 
+```
 
 ## Know Me
