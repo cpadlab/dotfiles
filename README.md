@@ -34,13 +34,27 @@ Note: Neofetch contains an ASCII art of 14wual [View current ASCII](https://gith
 ### Credits
 S4vitar, xJackSx and adi1090x, D3Ext
 
+
+### Current Neofetch
+
+```bash
+                                      《·───────────────·》◈《·──────────────·  
+██╗    ██╗██╗   ██╗ █████╗ ██╗          OS᛬ Parrot 
+██║    ██║██║   ██║██╔══██╗██║          Kernel᛬ 6.0.0-12parrot1-amd64 
+██║ █╗ ██║██║   ██║███████║██║          DE᛬ MATE 
+██║███╗██║██║   ██║██╔══██║██║          WM᛬ Metacity (Marco) 
+╚███╔███╔╝╚██████╔╝██║  ██║███████╗     Shell᛬ zsh 
+ ╚══╝╚══╝  ╚═════╝ ╚═╝  ╚═╝╚══════╝     CPU᛬ 11th Gen Intel i7-1165G7 
+                                        GPU᛬ Intel TigerLake GT2 [Iris Xe Graph 
+         (code by wual)                 Memory᛬ 1,54GiB / 15,39GiB 
+                                      《·───────────────·》◈《·───────────────  
+```
+
 ### Change Neofetch ASCII Arte
 
 ```bash
 sudo nano ~/.config/bin/14wual.txt
 # Paste your ASCII Art 
 ```
-
-### Current Neofetch
 
 ## Know Me
