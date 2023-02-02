@@ -19,7 +19,7 @@ sudo chmod +x install.sh
 
 ## Containing?
 
-<table align="left">
+<table>
 	<thead>
 		<tr>
 			<th>Util</th>
@@ -28,47 +28,55 @@ sudo chmod +x install.sh
 	</thead>
 	<tbody>
 		<tr>
-			<td>Cell 1x1</td>
-			<td>Cell 2x1</td>
+			<td>Environment</td>
+			<td>BSPWM</td>
 		</tr>
 		<tr>
-			<td>Cell 1x2</td>
-			<td>Cell 2x2</td>
+			<td>HotKeys</td>
+			<td>Sxhkd</td>
 		</tr>
 		<tr>
-			<td>Cell 1x3</td>
-			<td>Cell 2x3</td>
+			<td>Status Bar</td>
+			<td>Polybar</td>
 		</tr>
 		<tr>
-			<td>Cell 1x4</td>
-			<td>Cell 2x4</td>
+			<td>Wallpaper</td>
+			<td>D3Ext/aestethic-wallpapers</td>
 		</tr>
 		<tr>
-			<td>Cell 1x5</td>
-			<td>Cell 2x5</td>
+			<td>Terminal</td>
+			<td>Kitty</td>
 		</tr>
 		<tr>
-			<td>Cell 1x6</td>
-			<td>Cell 2x6</td>
+			<td>Interpreter</td>
+			<td>ZSH</td>
 		</tr>
 		<tr>
-			<td>Cell 1x7</td>
-			<td>Cell 2x7</td>
+			<td>Pithcher</td>
+			<td>Rofi</td>
 		</tr>
 		<tr>
-			<td>Cell 1x8</td>
-			<td>Cell 2x8</td>
+			<td></td>
+			<td>Picom</td>
 		</tr>
 		<tr>
-			<td>Cell 1x9</td>
-			<td>Cell 2x9</td>
+			<td>Terminal Information</td>
+			<td>Neofetch</td>
 		</tr>
 	</tbody>
 </table>
 
-Environment: BSPWM
-Hotkeys: Sxhkd
-Status bar: Polybar
+**Other Prograns**
+
+<table>
+	<tbody>
+		<tr>
+			<td>Spotify</td>
+			<td>VSCode</td>
+			<td>Brave-Browser</td>
+		</tr>
+	</tbody>
+</table>
 
 Note: Neofetch contains an ASCII art of 14wual [View current ASCII](https://github.com/14wual/dotfiles/main/README.md#current-neofetch)
 
