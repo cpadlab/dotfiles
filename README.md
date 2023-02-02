@@ -21,6 +21,8 @@ Environment: BSPWM
 Hotkeys: Sxhkd
 Status bar: Polybar
 
+Note: Neofetch contains an ASCII art of 14wual [View current ASCII](https://github.com/14wual/dotfiles/main/README.md#current-neofetch)
+
 ## Gallery
 
 ## Tree
@@ -36,5 +38,7 @@ S4vitar, xJackSx and adi1090x, D3Ext
 sudo nano ~/.config/bin/14wual.txt
 # Paste your ASCII Art 
 ```
+
+### Current Neofetch
 
 ## Know Me
