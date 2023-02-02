@@ -78,7 +78,7 @@ sudo chmod +x install.sh
 	</tbody>
 </table>
 
-Note: Neofetch contains an ASCII art of 14wual [View current ASCII](https://github.com/14wual/dotfiles/main/README.md#current-neofetch)
+Note: Neofetch contains an ASCII art of 14wual [View current ASCII](https://github.com/14wual/dotfiles/blob/main/README.md#current-neofetch)
 
 ## Gallery
 
