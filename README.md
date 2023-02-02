@@ -1,10 +1,12 @@
+[Leer en Español](https://GitHub.com/14wual/dotfiles/read/spanish.md)
+
 # 14Wual dotfiles
 
 Repository with all **my personal BSPWM environment** scripts and configurations.
 
 What will my BSPWM look like? [See Here](https://github.com/14wual/dotfiles/main/README.md#gallery)
 
-
+This script has been tested on Parrot OS, Kali Linux, Ubuntu and Debian
 
 ## Install
 
