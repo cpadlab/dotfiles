@@ -84,10 +84,38 @@ Note: Neofetch contains an ASCII art of 14wual [View current ASCII](https://gith
 
 ## Tree
 
+```
+├───Config
+│   ├───bin
+│   ├───bspwm
+│   │   └───scripts
+│   ├───kitty
+│   ├───picom
+│   ├───polybar
+│   │   └───material
+│   │       └───scripts
+│   │           └───rofi
+│   ├───sxhkd
+│   └───neofetch
+├───Wallpaper
+├───fonts
+│   └───HNF
+├───kitty
+│   ├───bin
+│   ├───lib
+│   └───share
+├───rofi
+└───scripts
+```
+
 ## Others
 
 ### Credits
-S4vitar, xJackSx and adi1090x, D3Ext
+
+ 1. [S4vitar](https://github.com/s4vitar)
+ 2. [xJackSx](https://github.com/xJackSx)
+ 3. [adi1090x](https://github.com/adi1090x)
+ 4. [D3Ext](https://github.com/D3Ext/)
 
 
 ### Current Neofetch
@@ -113,3 +141,7 @@ sudo nano ~/.config/bin/14wual.txt
 ```
 
 ## Know Me
+
+<b>Linkeding</b> - https://www.linkedin.com/in/cpadilla10/ <br>
+<b>Twitter</b> - https://twitter.com/codewual <br>
+<b>YouTube</b> - https://www.youtube.com/channel/UC0B3mTwPPdKPEwLerauEtdg <br>
