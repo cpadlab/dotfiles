@@ -82,6 +82,12 @@ Note: Neofetch contains an ASCII art of 14wual [View current ASCII](https://gith
 
 ## Gallery
 
+![2023-02-07-02:13:02-screenshot](https://user-images.githubusercontent.com/105047274/217115786-1595ffc9-2c36-48ab-bea5-f93a40eb6038.png)
+
+![2023-02-07-02:12:23-screenshot](https://user-images.githubusercontent.com/105047274/217115805-cf7d265c-76d7-4fc9-bf92-82b52e4b545f.png)
+
+![2023-02-07-02:11:46-screenshot](https://user-images.githubusercontent.com/105047274/217115838-f7b1c1bd-58d9-4805-a105-41b2c7a1ea0c.png)
+
 ## Tree
 
 ```
