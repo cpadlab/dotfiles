@@ -113,3 +113,4 @@ sudo apt install -y neofetch gedit
 sudo apt install -y polybar
 
 notify-send "14Wual DOTFILES INSTALLED"
+firefox --new-tab --url https://14wual.github.com/
