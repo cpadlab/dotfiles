@@ -146,6 +146,15 @@ sudo nano ~/.config/bin/14wual.txt
 # Paste your ASCII Art 
 ```
 
+### Alias For ".zshrc"
+
+**For a good working of the "target" functionality copy the script scripts/replace.sh in documents/scripts**
+
+```bash
+alias neofetch='neofetch --source ~/home/$user/.config/bin/14wual.txt'
+alias target='bash /home/$user/Documents/scripts/replace.sh'
+```
+
 ## Know Me
 
 <b>Linkeding</b> - https://www.linkedin.com/in/cpadilla10/ <br>
