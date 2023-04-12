@@ -2,6 +2,8 @@
 
 # 14Wual dotfiles
 
+## Apr Update - V1.
+
 Repository with all **my personal BSPWM environment** scripts and configurations.
 
 What will my BSPWM look like? [See Here](https://github.com/14wual/dotfiles/main/README.md#gallery)
@@ -154,6 +156,8 @@ sudo nano ~/.config/bin/14wual.txt
 alias neofetch='neofetch --source ~/home/$user/.config/bin/14wual.txt'
 alias target='bash /home/$user/Documents/scripts/replace.sh'
 ```
+
+**Or file**
 
 ## Know Me
 

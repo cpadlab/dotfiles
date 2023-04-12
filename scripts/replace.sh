@@ -1,2 +1,6 @@
 #!/bin/bash
-echo "$1" > "/home/$user/.config/bin/target"
+function settarget(){
+    ip_address=$1
+    machine_name=$2
+    echo "$ip_address $machine_name" > .config/bin/target
+}
