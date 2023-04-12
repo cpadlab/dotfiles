@@ -4,7 +4,7 @@ if [ "$(whoami)" == "root" ]; then
     exit 1
 fi
 
-ruta=$(pwd)
+path=$(pwd) 
 
 # xJackSx
 
@@ -45,29 +45,29 @@ echo 'source ~/.powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 sudo git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /root/.powerlevel10k
 
 mkdir -p ~/.config/rofi/themes
-cp $ruta/rofi/nord.rasi ~/.config/rofi/themes/
+cp $path/rofi/nord.rasi ~/.config/rofi/themes/
 
-sudo dpkg -i $ruta/lsd.deb
+sudo dpkg -i $path/lsd.deb
 
-sudo cp -v $ruta/fonts/HNF/* /usr/local/share/fonts/
+sudo cp -v $path/fonts/HNF/* /usr/local/share/fonts/
 
-sudo cp -v $ruta/Config/polybar/fonts/* /usr/share/fonts/truetype/
+sudo cp -v $path/Config/polybar/fonts/* /usr/share/fonts/truetype/
 
 mkdir ~/Wallpaper
-cp -v $ruta/Wallpaper/* ~/Wallpaper
+cp -v $path/Wallpaper/* ~/Wallpaper
 mkdir ~/ScreenShots
 
-cp -rv $ruta/Config/* ~/.config/
-sudo cp -rv $ruta/kitty /opt/
+cp -rv $path/Config/* ~/.config/
+sudo cp -rv $path/kitty /opt/
 
 rm -rf ~/.zshrc
-cp -v $ruta/.zshrc ~/.zshrc
+cp -v $path/.zshrc ~/.zshrc
 
-cp -v $ruta/.p10k.zsh ~/.p10k.zsh
-sudo cp -v $ruta/.p10k.zsh-root /root/.p10k.zsh
+cp -v $path/.p10k.zsh ~/.p10k.zsh
+sudo cp -v $path/.p10k.zsh-root /root/.p10k.zsh
 
-sudo cp -v $ruta/scripts/whichSystem.py /usr/local/bin/
-sudo cp -v $ruta/scripts/screenshot /usr/local/bin/
+sudo cp -v $path/scripts/whichSystem.py /usr/local/bin/
+sudo cp -v $path/scripts/screenshot /usr/local/bin/
 
 sudo apt install -y zsh-syntax-highlighting zsh-autosuggestions zsh-autocomplete
 sudo mkdir /usr/share/zsh-sudo
