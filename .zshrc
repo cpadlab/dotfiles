@@ -53,14 +53,16 @@ PATH=/root/.local/bin:/snap/bin:/usr/sandbox/:/usr/local/bin:/usr/bin:/bin:/usr/
 
 # Custom Aliases
 
+alias neofetch='neofetch --source /home/wual/.config/bin/14wual.txt'
 alias ll='lsd -lh --group-dirs=first'
 alias la='lsd -a --group-dirs=first'
 alias l='lsd --group-dirs=first'
 alias lla='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first'
-alias cat='/bin/batcat --paging=never'
+alias cat='/bin/batcat'
 alias catn='cat'
 alias catnl='batcat'
+alias fav='/home/wual/.config/bin/fav.sh'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -150,3 +152,4 @@ bindkey "^[[3~" delete-char
 bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
 source ~/.powerlevel10k/powerlevel10k.zsh-theme
+

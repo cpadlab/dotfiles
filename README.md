@@ -2,7 +2,7 @@
 
 # 14Wual dotfiles
 
-## Apr Update - V1.
+## 23May Update
 
 Repository with all **my personal BSPWM environment** scripts and configurations.
 
@@ -15,7 +15,7 @@ This script has been tested on Parrot OS, Kali Linux, Ubuntu and Debian
 ```bash
 sudo git clone https://github.com/14wual/dotfiles
 cd dotfiles
-sudo chmod +x install.sh
+sudo chmod +777 install.sh
 ./install.sh
 ```
 
@@ -118,14 +118,6 @@ Note: Neofetch contains an ASCII art of 14wual [View current ASCII](https://gith
 
 ## Others
 
-### Credits
-
- 1. [S4vitar](https://github.com/s4vitar)
- 2. [xJackSx](https://github.com/xJackSx)
- 3. [adi1090x](https://github.com/adi1090x)
- 4. [D3Ext](https://github.com/D3Ext/)
-
-
 ### Current Neofetch
 
 ```bash
@@ -150,14 +142,21 @@ sudo nano ~/.config/bin/14wual.txt
 
 ### Alias For ".zshrc"
 
-**For a good working of the "target" functionality copy the script scripts/replace.sh in documents/scripts**
+**Personal Alias. the .zshrc file has different personal aliases for 14wual and s4vitar. Aliases Wual:**
 
 ```bash
-alias neofetch='neofetch --source ~/home/$user/.config/bin/14wual.txt'
-alias target='bash /home/$user/Documents/scripts/replace.sh'
+alias neofetch='neofetch --source /home/wual/.config/bin/14wual.txt'
+alias fav='/home/wual/.config/bin/fav.sh'
 ```
 
 **Or file**
+
+### Credits
+
+ 1. [S4vitar](https://github.com/s4vitar)
+ 2. [xJackSx](https://github.com/xJackSx)
+ 3. [adi1090x](https://github.com/adi1090x)
+ 4. [D3Ext](https://github.com/D3Ext/)
 
 ## Know Me
 
