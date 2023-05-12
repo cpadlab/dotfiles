@@ -158,13 +158,15 @@ theme-name = Kali-Dark
 Move the content of this folder: `~/.config/xfce4/panel` to `~/.config/xfce4/panel.bak` <br>
 Copy the content of this folder: `dotfiles/other/xfce4-panel/` in `~/.config/xfce4/panel`. 
 
+![xfce4-panel](images/xfce4-panel.png)
+
 ```bash
 sudo mkdir ~/.config/xfce4/panel.bak
 sudo cd ~/.config/xfce4/panel && sudo cp * ../panel.bak
 sudo cd $PATH/other/xfce4-panel && sudo cp * ~/.config/xfce4/panel
 ```
 
-![xfce4-desktop](images/xfce4-desktop)
+![xfce4-desktop](images/xfce4-desktop.png)
 
 ## Shortcuts
 
