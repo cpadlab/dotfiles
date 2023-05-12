@@ -191,6 +191,13 @@ super + alt + ctrl + h >> systemctl hibernate # Hibernate PC
 @Print + alt >> screenshot window
 ```
 
+### Credits
+
+ 1. [S4vitar](https://github.com/s4vitar)
+ 2. [xJackSx](https://github.com/xJackSx)
+ 3. [adi1090x](https://github.com/adi1090x)
+ 4. [D3Ext](https://github.com/D3Ext/)
+
 ## Know Me
 
 <b>Linkeding</b> - https://www.linkedin.com/in/cpadilla10/ <br>
