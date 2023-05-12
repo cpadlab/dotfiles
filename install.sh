@@ -6,9 +6,6 @@ fi
 
 path=$(pwd) 
 
-
-# xJackSx
-
 sudo apt update
 
 sudo apt upgrade
@@ -52,13 +49,13 @@ sudo dpkg -i $path/lsd.deb
 
 sudo cp -v $path/fonts/HNF/* /usr/local/share/fonts/
 
-sudo cp -v $path/Config/polybar/fonts/* /usr/share/fonts/truetype/
+sudo cp -v $path/config/polybar/fonts/* /usr/share/fonts/truetype/
 
-mkdir ~/Wallpaper
-cp -v $path/Wallpaper/* ~/Wallpaper
+mkdir ~/wallpaper
+cp -v $path/wallpaper/* ~/wallpaper
 mkdir ~/ScreenShots
 
-cp -rv $path/Config/* ~/.config/
+cp -rv $path/config/* ~/.config/
 sudo cp -rv $path/kitty /opt/
 
 rm -rf ~/.zshrc
@@ -87,8 +84,6 @@ chmod +x ~/.config/bin/htb_target.sh
 chmod +x ~/.config/polybar/launch.sh
 sudo chmod +x /usr/local/bin/whichSystem.py
 sudo chmod +x /usr/local/bin/screenshot
-
-# 14Wual
 
 sudo apt install curl
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
