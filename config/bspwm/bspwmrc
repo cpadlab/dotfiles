@@ -5,8 +5,8 @@ vmware-user-suid-wrapper &
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-#bspc monitor -d I II III IV V VI II VIII IX X
-bspc monitor -d I II III IV V
+bspc monitor -d I II III IV V HDMI-1
+bspc monitor -d VI VII VIII IX X eDP-1
 
 bspc config border_width         2
 bspc config window_gap          12
@@ -21,19 +21,11 @@ bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 
-# RESOLUCION ARANDR
-
-
-# WALLPAPER
-feh --bg-fill ~/Wallpaper/wallpaper.jpg
-
-# POLYBAR
+feh --bg-fill ~/Pictures/wallpaper/w4.jpg
 bash ~/.config/polybar/launch.sh --material
 
-# CUSTOM
 bspc config focus_follows_pointer true
 
-# PICOM
 picom &
 bspc config border_width 0
 

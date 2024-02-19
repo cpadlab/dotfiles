@@ -1,6 +1,6 @@
 #! /bin/sh
 
-output=~/ScreenShots/%Y-%m-%d-%T-screenshot.png
+output=~/Pictures/screenshot/%Y-%m-%d-%T-screenshot.png
 
 case "$1" in
 	"select") scrot -s -q 100 -l mode=classic "$output" || exit ;;

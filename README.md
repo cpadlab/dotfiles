@@ -1,10 +1,10 @@
-[Leer en Español](https://GitHub.com/14wual/dotfiles/main/other/Sread/spanish.md)
+# Untested
 
-# 14Wual dotfiles
+# 14Wual dotfiles v3.43
 
-## 23May Update V2 | v2.38
+## 19 Feb Update
 
-Repository with all **my personal BSPWM environment** scripts and configurations for kali-linux.
+Repository with all **My personal BSPWM environment** scripts and configurations for kali-linux.
 
 What will my BSPWM look like? [See Here](https://github.com/14wual/dotfiles/main/README.md#gallery)
 
@@ -13,66 +13,10 @@ This script has been tested on Parrot OS, Kali Linux, Ubuntu and Debian
 ## Install
 
 ```bash
-sudo git clone https://github.com/14wual/dotfiles
-cd dotfiles
-sudo chmod +777 install.sh
+sudo git clone https://github.com/14wual/dotfiles && cd dotfiles
+sudo chmod +x install.sh
 ./install.sh
 ```
-
-## Containing?
-
-<table>
-	<thead>
-		<tr>
-			<th>Util</th>
-			<th>Name</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Environment</td>
-			<td>BSPWM</td>
-		</tr>
-		<tr>
-			<td>HotKeys</td>
-			<td>Sxhkd</td>
-		</tr>
-		<tr>
-			<td>Status Bar</td>
-			<td>Polybar</td>
-		</tr>
-		<tr>
-			<td>Terminal</td>
-			<td>Kitty</td>
-		</tr>
-		<tr>
-			<td>Interpreter</td>
-			<td>ZSH</td>
-		</tr>
-		<tr>
-			<td>Pithcher</td>
-			<td>xfce4-appfinder</td>
-		</tr>
-		<tr>
-			<td>Terminal Information</td>
-			<td>Neofetch</td>
-		</tr>
-	</tbody>
-</table>
-
-**Other Prograns**
-
-<table>
-	<tbody>
-		<tr>
-			<td>Spotify</td>
-			<td>VSCode</td>
-			<td>Brave-Browser</td>
-		</tr>
-	</tbody>
-</table>
-
-Note: Neofetch contains an ASCII art of 14wual [View current ASCII](https://github.com/14wual/dotfiles/blob/main/README.md#current-neofetch)
 
 ## Gallery
 
@@ -85,95 +29,32 @@ Note: Neofetch contains an ASCII art of 14wual [View current ASCII](https://gith
 ## Tree
 
 ```
-├───config
-│   ├───bin
-│   ├───bspwm
-│   ├───kitty
-│   ├───picom
-│   ├───polybar
-│   │   └───material
-│   ├───sxhkd
-│   └───neofetch
-├───wallpaper
-├───fonts
-│   └───HNF
-├───other
-│   ├───login.conf
-│   ├───xfce4-panel
-├───deb
-├───images
-└───scripts
+┌──(cpadlab㉿seccon)-[~/Documents/non-delete/bspwm]
+└─$ tree        
+.
+├── README.md
+├── install.sh
+├── config
+│   ├── bin
+│   ├── bspwm
+│   ├── picom
+│   ├── polybar
+│   └── sxhkd
+├── files
+├── fonts
+├── scripts
+│   ├── screenshot
+│   └── whichSystem.py
+└── wallpaper
 ```
 
-## Others
-
-### Current Neofetch
-
-```bash
-❯ neofetch
-                                      ⠀ ⬤ ››⬤ ››⬤ ››⬤ ››14Wual‹‹⬤ ‹‹⬤ ‹‹⬤ ‹‹⬤ 
-██╗    ██╗██╗   ██╗ █████╗ ██╗        《·───────────────·》◈《·──────────────·》 
-██║    ██║██║   ██║██╔══██╗██║          OS᛬ Kali 
-██║ █╗ ██║██║   ██║███████║██║          DE᛬ bspwm 
-██║███╗██║██║   ██║██╔══██║██║          Shell᛬ zsh 
-╚███╔███╔╝╚██████╔╝██║  ██║███████╗     Memory᛬ 1.13GiB / 15.37GiB 
- ╚══╝╚══╝  ╚═════╝ ╚═╝  ╚═╝╚══════╝     CPU᛬ 11th Gen Intel i7-1165G7 
-                                        GPU᛬ Intel TigerLake-LP GT2 [Iris Xe Graphics]
-         (code by wual)                 Know 14Wual.github.io/dotfiles.php 
-                                      《·───────────────·》◈《·───────────────·》 
-
-```
-
-### Change Neofetch ASCII Arte
-
-```bash
-sudo nano ~/.config/bin/14wual.txt
-# Paste your ASCII Art 
-```
-
-### Alias For ".zshrc"
-
-**Personal Alias. the .zshrc file has different personal aliases for 14wual and s4vitar. Aliases Wual:**
-
-```bash
-alias neofetch='neofetch --source /home/wual/.config/bin/14wual.txt'
-alias mcc='/home/wual/.config/bin/mcc.sh'
-alias clip='xfce4-clipman && xfce4-clipman-history'
-```
-
-### XFCE4
-
-**Custom Login Page**
-
-Copy the file: `dotfiles/Wallpaper/wallpaper.jpg` in `/usr/share/backgrounds`. <br>
-Modify the following file: `/etc/lightdm/lightdm-gtk-greeter.conf`
-
-```bash
-background=/usr/share/backgrounds/wallpaper.jpg
-theme-name = Kali-Dark
-```
-
-**Custom XFCE4 Panel**
-
-Move the content of this folder: `~/.config/xfce4/panel` to `~/.config/xfce4/panel.bak` <br>
-Copy the content of this folder: `dotfiles/other/xfce4-panel/` in `~/.config/xfce4/panel`. 
-
-![xfce4-panel](images/xfce4-panel.png)
-
-```bash
-sudo mkdir ~/.config/xfce4/panel.bak
-sudo cd ~/.config/xfce4/panel && sudo cp * ../panel.bak
-sudo cd $PATH/other/xfce4-panel && sudo cp * ~/.config/xfce4/panel
-```
-
-![xfce4-desktop](images/xfce4-desktop.png)
 
 ## Shortcuts
 
 ```bash
 #----------BASIC----------
-super + Return >> kitty # Terminal Emulator
-super + d >> xfce4-appfinder # Program launcher
+super + Return >> gnome-terminal # Terminal Emulator
+super + d >> rofi # Program launcher
 
 #----------APPS----------
 super + shift + b >> brave-browser # Open Browser
@@ -184,7 +65,6 @@ super + shift + k >> secrets # Password Manager
 
 #----------PC----------
 super + alt + s >> systemctl suspend # Suspend PC
-super + alt + s >> i3lock # Block PC
 super + alt + ctrl + h >> systemctl hibernate # Hibernate PC
 
 #----------SCREENSHOT----------
@@ -192,13 +72,6 @@ super + alt + ctrl + h >> systemctl hibernate # Hibernate PC
 @Print + ctrl >> screenshot
 @Print + alt >> screenshot window
 ```
-
-### Credits
-
- 1. [S4vitar](https://github.com/s4vitar)
- 2. [xJackSx](https://github.com/xJackSx)
- 3. [adi1090x](https://github.com/adi1090x)
- 4. [D3Ext](https://github.com/D3Ext/)
 
 ## Know Me
 
@@ -208,7 +81,5 @@ super + alt + ctrl + h >> systemctl hibernate # Hibernate PC
 
 ### Credits
 
- 1. [S4vitar](https://github.com/s4vitar)
- 2. [xJackSx](https://github.com/xJackSx)
- 3. [Wallpaper]()
- 4. [D3Ext](https://github.com/D3Ext/)
+1. [S4vitar](https://github.com/s4vitar)
+2. [xJackSx](https://github.com/xJackSx)

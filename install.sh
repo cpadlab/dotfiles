@@ -4,109 +4,201 @@ if [ "$(whoami)" == "root" ]; then
     exit 1
 fi
 
-path=$(pwd) 
+path=$(pwd)
 
-sudo apt update
+echo "Dotfiles v3.43          Carlos Padilla (14wual)"
+echo "==============================================="
 
-sudo apt upgrade
+packages=(
+    "build-essential"
+    "git"
+    "vim"
+    "xcb"
+    "libxcb-util0-dev"
+    "libxcb-ewmh-dev"
+    "libxcb-randr0-dev"
+    "libxcb-icccm4-dev"
+    "libxcb-keysyms1-dev"
+    "libxcb-xinerama0-dev"
+    "libasound2-dev"
+    "libxcb-xtest0-dev"
+    "libxcb-shape0-dev"
+    "cmake"
+    "cmake-data"
+    "pkg-config"
+    "python3-sphinx"
+    "libcairo2-dev"
+    "libxcb1-dev"
+    "libxcb-util0-dev"
+    "libxcb-randr0-dev"
+    "libxcb-composite0-dev"
+    "python3-xcbgen"
+    "xcb-proto"
+    "libxcb-image0-dev"
+    "libxcb-ewmh-dev"
+    "libxcb-icccm4-dev"
+    "libxcb-xkb-dev"
+    "libxcb-xrm-dev"
+    "libxcb-cursor-dev"
+    "libasound2-dev"
+    "libpulse-dev"
+    "libjsoncpp-dev"
+    "libmpdclient-dev"
+    "libuv1-dev"
+    "libnl-genl-3-dev"
+    "meson"
+    "libxext-dev"
+    "libxcb1-dev"
+    "libxcb-damage0-dev"
+    "libxcb-xfixes0-dev"
+    "libxcb-shape0-dev"
+    "libxcb-render-util0-dev"
+    "libxcb-render0-dev"
+    "libxcb-composite0-dev"
+    "libxcb-image0-dev"
+    "libxcb-present-dev"
+    "libxcb-xinerama0-dev"
+    "libpixman-1-dev"
+    "libdbus-1-dev"
+    "libconfig-dev"
+    "libgl1-mesa-dev"
+    "libpcre2-dev"
+    "libevdev-dev"
+    "uthash-dev"
+    "libev-dev"
+    "libx11-xcb-dev"
+    "libxcb-glx0-dev"
+    "libpcre3"
+    "libpcre3-dev"
+    "feh"
+    "scrot"
+    "scrub"
+    "rofi"
+    "xclip"
+    "bat"
+    "locate"
+    "ranger"
+    "neofetch"
+    "wmname"
+    "acpi"
+    "bspwm"
+    "sxhkd"
+    "imagemagick"
+    "lsd"
+)
 
-sudo apt install -y build-essential git vim xcb libxcb-util0-dev libxcb-ewmh-dev libxcb-randr0-dev libxcb-icccm4-dev libxcb-keysyms1-dev libxcb-xinerama0-dev libasound2-dev libxcb-xtest0-dev libxcb-shape0-dev
+repositories=(
+    "--recursive https://github.com/polybar/polybar"
+    "https://github.com/ibhagwan/picom"
+)
 
-sudo apt install -y cmake cmake-data pkg-config python3-sphinx libcairo2-dev libxcb1-dev libxcb-util0-dev libxcb-randr0-dev libxcb-composite0-dev python3-xcbgen xcb-proto libxcb-image0-dev libxcb-ewmh-dev libxcb-icccm4-dev libxcb-xkb-dev libxcb-xrm-dev libxcb-cursor-dev libasound2-dev libpulse-dev libjsoncpp-dev libmpdclient-dev libuv1-dev libnl-genl-3-dev
+_scripts=(
+    "scripts/whichSystem.py"
+    "scripts/screenshot"
+)
 
-sudo apt install -y meson libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-render-util0-dev libxcb-render0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev libxcb-xinerama0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl1-mesa-dev libpcre2-dev libevdev-dev uthash-dev libev-dev libx11-xcb-dev libxcb-glx0-dev libpcre3 libpcre3-dev
+_chmod=(
+    "~/.config/bspwm/bspwmrc"
+    "~/.config/bspwm/scripts/bspwm_resize"
+    "~/.config/bin/ethernet_status.sh"
+    "~/.config/bin/htb_status.sh"
+    "~/.config/bin/htb_target.sh"
+    "~/.config/polybar/launch.sh"
+)
 
-sudo apt install -y feh scrot scrub zsh rofi xclip bat locate neofetch wmname acpi bspwm sxhkd imagemagick ranger kitty
+_sudo_chmod=(
+    "/usr/local/bin/whichSystem.py"
+    "/usr/local/bin/screenshot"
+)
 
-mkdir ~/github
+echo "[INFO] Installing APT Paquets"
+for package in "${packages[@]}"
+do
+    sudo apt install -y "$package" > /dev/null 2>&1
+    echo "[*] ${package} package installed correctly"
+done
 
-cd ~/github
-git clone --recursive https://github.com/polybar/polybar
-git clone https://github.com/ibhagwan/picom.git
+echo "[INFO] Utility folders created correctly"
+mkdir ~/delete ~/Pictures/wallpaper ~/Pictures/screenshot && cd ~/delete
 
-cd ~/github/polybar
+echo "[INFO] Cloning required repositories"
+for repository in "${repositories[@]}"
+do
+    git clone "$repository" > /dev/null 2>&1
+    echo "[*] Cloned Repository: ${repository}"
+done
+
+echo "[INFO] Configuring Polybar"
+cd ~/delete/polybar
 mkdir build
 cd build
-cmake ..
-make -j$(nproc)
-sudo make install
+cmake .. > /dev/null 2>&1
+make -j$(nproc) > /dev/null 2>&1
+sudo make install 
 
-cd ~/github/picom
-git submodule update --init --recursive
-meson --buildtype=release . build
-ninja -C build
+echo "[INFO] Configuring Picom"
+cd ~/delete/picom
+git submodule update --init --recursive > /dev/null 2>&1
+meson --buildtype=release . build > /dev/null 2>&1
+ninja -C build > /dev/null 2>&1
 sudo ninja -C build install
 
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.powerlevel10k
-echo 'source ~/.powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+echo "[INFO] Configuring Power Level 10k"
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.powerlevel10k > /dev/null 2>&1
+echo 'source ~/.powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
 
-sudo git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /root/.powerlevel10k
-
+echo "[INFO] Configuring Rofi"
 mkdir -p ~/.config/rofi/themes
-cp $path/rofi/nord.rasi ~/.config/rofi/themes/
+cp $path/files/rofi/nord.rasi ~/.config/rofi/themes/
 
-sudo dpkg -i $path/lsd.deb
-
-sudo cp -v $path/fonts/HNF/* /usr/local/share/fonts/
-
+echo "[INFO] Copying Fonts"
+sudo cp -v $path/fonts/* /usr/local/share/fonts/
 sudo cp -v $path/config/polybar/fonts/* /usr/share/fonts/truetype/
 
-mkdir ~/wallpaper
-cp -v $path/wallpaper/* ~/wallpaper
-mkdir ~/ScreenShots
+echo "[INFO] Copying Wallpapers"
+cp -v $path/wallpaper/* ~/Pictures/wallpaper
 
+echo "[INFO] Updating .zshrc"
+rm -rf ~/.zshrc && cp -v $path/files/.zshrc ~/.zshrc
+
+cp -v $path/files/.p10k.zsh ~/.p10k.zsh
+sudo cp -v $path/files/.p10k.zsh-root /root/.p10k.zsh
+
+echo "[INFO] Copying Configuration Files"
+rm -r ~/.config/polybar
 cp -rv $path/config/* ~/.config/
-sudo cp -rv $path/kitty /opt/
 
-rm -rf ~/.zshrc
-cp -v $path/.zshrc ~/.zshrc
+for _script in "${_scripts[@]}"
+do
+    sudo cp -v $path/"$_script" /usr/local/bin/
+done
 
-cp -v $path/.p10k.zsh ~/.p10k.zsh
-sudo cp -v $path/.p10k.zsh-root /root/.p10k.zsh
-
-sudo cp -v $path/scripts/whichSystem.py /usr/local/bin/
-sudo cp -v $path/scripts/screenshot /usr/local/bin/
-
-sudo apt install -y zsh-syntax-highlighting zsh-autosuggestions zsh-autocomplete
+echo "[INFO] Installing latest requirements"
+sudo apt install -y zsh-syntax-highlighting zsh-autosuggestions > /dev/null 2>&1
 sudo mkdir /usr/share/zsh-sudo
 cd /usr/share/zsh-sudo
-sudo wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/sudo/sudo.plugin.zsh
+sudo wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/sudo/sudo.plugin.zsh > /dev/null 2>&1
 
-chsh -s /usr/bin/zsh
-sudo usermod --shell /usr/bin/zsh root
-sudo ln -s -fv ~/.zshrc /root/.zshrc
+echo "[INFO] Updating permissions"
+for file in "${_chmod[@]}"
+do
+    chmod +x "$file"
+done
 
-chmod +x ~/.config/bspwm/bspwmrc
-chmod +x ~/.config/bspwm/scripts/bspwm_resize
-chmod +x ~/.config/bin/ethernet_status.sh
-chmod +x ~/.config/bin/htb_status.sh
-chmod +x ~/.config/bin/htb_target.sh
-chmod +x ~/.config/polybar/launch.sh
-sudo chmod +x /usr/local/bin/whichSystem.py
-sudo chmod +x /usr/local/bin/screenshot
+for file in "${_sudo_chmod[@]}"
+do
+    sudo chmod +x "$file"
+done
 
-sudo apt install curl
-sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-sudo apt update
-sudo apt install brave-browse
+sudo ln -s -fv ~/.zshrc /root/.zshrc > /dev/null 2>&1
 
-curl -sS https://download.spotify.com/debian/pubkey_7A3A762FAFD4A51F.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
-echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
-sudo apt-get update && sudo apt-get install -y spotify-clien
+echo "[INFO] Eliminating waste"
+rm -rf ~/github && rm -rfv $path
 
-sudo apt update
-sudo apt install -y software-properties-common apt-transport-https curl
-curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
-sudo apt update
-sudo apt install -y code
+rofi-theme-selector
 
-sudo apt update
-sudo apt upgrade
+xdg-open "https://github.com/14wual/dotfiles" > /dev/null 2>&1
+notify-send "14Wual Dotfiles Installed"
 
-sudo apt install -y neofetch gedit
-sudo apt install -y polybar
-
-notify-send "14Wual DOTFILES INSTALLED"
-firefox --new-tab --url https://14wual.github.io/thanks.html?rep=dotfiles
+echo "[INFO] Finished! Thank you very much for installing"
+exit

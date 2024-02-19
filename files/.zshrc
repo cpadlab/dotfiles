@@ -53,16 +53,14 @@ PATH=/root/.local/bin:/snap/bin:/usr/sandbox/:/usr/local/bin:/usr/bin:/bin:/usr/
 
 # Custom Aliases
 
-alias neofetch='neofetch --source /home/wual/.config/bin/14wual.txt'
 alias ll='lsd -lh --group-dirs=first'
 alias la='lsd -a --group-dirs=first'
 alias l='lsd --group-dirs=first'
 alias lla='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first'
-alias cat='/bin/batcat'
+alias cat='/bin/batcat --paging=never'
 alias catn='cat'
 alias catnl='batcat'
-alias mcc='/home/wual/.config/bin/mcc.sh'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -92,7 +90,6 @@ function extractPorts(){
 # Settarget
 
 function settarget(){
-
 	if [ $# -eq 1 ]; then
 	echo $1 > ~/.config/bin/target
 	elif [ $# -gt 2 ]; then

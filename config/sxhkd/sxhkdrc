@@ -1,14 +1,14 @@
 ##########################
-# 	  14WUAL HOTKEYS	 #
+# wm independent hotkeys #
 ##########################
 
 # terminal emulator
 super + Return
-	kitty
+	gnome-terminal
 
 # program launcher
 super + d
-	xfce4-appfinder
+	rofi -show run
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -108,6 +108,14 @@ super + ctrl + alt + space
 # move/resize #
 ###############
 
+# expand a window by moving one of its side outward
+#super + alt + {h,j,k,l}
+#	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# contract a window by moving one of its side inward
+#super + alt + shift + {h,j,k,l}
+#	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
 # move a floating window
 super + ctrl + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
@@ -117,33 +125,16 @@ super + alt + {Left,Down,Up,Right}
 	~/.config/bspwm/scripts/bspwm_resize {west,south,north,east}
 
 ########################
-# Launchers App #
+# Custom Launchers App #
 ########################
 
-super + shift + b
-	brave-browser
-
-super + shift + c
-	code
-
-super + shift + s
-	spotify
-
+# Firefox
 super + shift + f
-	thunar
+	firefox
 
-super + shift + k
-	secrets
-
-###############
-# ScreenShots #
-###############
-
-super + alt + s
-	systemctl suspend
-
-super + alt + s
-	i3lock
+# BurpSuite
+super + shift + b
+	burpsuite
 
 ###############
 # ScreenShots #
