@@ -1,12 +1,10 @@
-# Untested
-
 # 14Wual dotfiles v3.43
 
 ## 19 Feb Update
 
 Repository with all **My personal BSPWM environment** scripts and configurations for kali-linux.
 
-What will my BSPWM look like? [See Here](https://github.com/14wual/dotfiles/main/README.md#gallery)
+What will my BSPWM look like? [See Here](https://github.com/14wual/dotfiles?tab=readme-ov-file#gallery)
 
 This script has been tested on Parrot OS, Kali Linux, Ubuntu and Debian
 
@@ -20,16 +18,16 @@ sudo chmod +x install.sh
 
 ## Gallery
 
-![1](https://user-images.githubusercontent.com/105047274/217115786-1595ffc9-2c36-48ab-bea5-f93a40eb6038.png)
+![1](images/)
 
-![2](https://user-images.githubusercontent.com/105047274/217115805-cf7d265c-76d7-4fc9-bf92-82b52e4b545f.png)
+![2](images/)
 
-![3](https://user-images.githubusercontent.com/105047274/217115838-f7b1c1bd-58d9-4805-a105-41b2c7a1ea0c.png)
+![3](images/)
 
 ## Tree
 
 ```
-┌──(cpadlab㉿seccon)-[~/Documents/non-delete/bspwm]
+┌──(14wual㉿github)-[~/14wual/dotfiles]
 └─$ tree        
 .
 ├── README.md
@@ -46,6 +44,12 @@ sudo chmod +x install.sh
 │   ├── screenshot
 │   └── whichSystem.py
 └── wallpaper
+```
+
+## Script Output
+
+```
+
 ```
 
 

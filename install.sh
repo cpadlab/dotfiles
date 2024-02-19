@@ -148,46 +148,46 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.powerlevel10
 echo 'source ~/.powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
 
 echo "[INFO] Configuring Rofi"
-mkdir -p ~/.config/rofi/themes
-cp $path/files/rofi/nord.rasi ~/.config/rofi/themes/
+mkdir -p ~/.config/rofi/themes > /dev/null 2>&1
+cp $path/files/rofi/nord.rasi ~/.config/rofi/themes/ > /dev/null 2>&1
 
 echo "[INFO] Copying Fonts"
-sudo cp -v $path/fonts/* /usr/local/share/fonts/
-sudo cp -v $path/config/polybar/fonts/* /usr/share/fonts/truetype/
+sudo cp -v $path/fonts/* /usr/local/share/fonts/ > /dev/null 2>&1
+sudo cp -v $path/config/polybar/fonts/* /usr/share/fonts/truetype/ > /dev/null 2>&1
 
 echo "[INFO] Copying Wallpapers"
-cp -v $path/wallpaper/* ~/Pictures/wallpaper
+cp -v $path/wallpaper/* ~/Pictures/wallpaper > /dev/null 2>&1
 
 echo "[INFO] Updating .zshrc"
-rm -rf ~/.zshrc && cp -v $path/files/.zshrc ~/.zshrc
+rm -rf ~/.zshrc > /dev/null 2>&1 && cp -v $path/files/.zshrc ~/.zshrc > /dev/null 2>&1
 
-cp -v $path/files/.p10k.zsh ~/.p10k.zsh
-sudo cp -v $path/files/.p10k.zsh-root /root/.p10k.zsh
+cp -v $path/files/.p10k.zsh ~/.p10k.zsh > /dev/null 2>&1
+sudo cp -v $path/files/.p10k.zsh-root /root/.p10k.zsh > /dev/null 2>&1
 
 echo "[INFO] Copying Configuration Files"
-rm -r ~/.config/polybar
-cp -rv $path/config/* ~/.config/
+rm -r ~/.config/polybar > /dev/null 2>&1
+cp -rv $path/config/* ~/.config/ > /dev/null 2>&1
 
 for _script in "${_scripts[@]}"
 do
-    sudo cp -v $path/"$_script" /usr/local/bin/
+    sudo cp -v $path/"$_script" /usr/local/bin/ > /dev/null 2>&1
 done
 
 echo "[INFO] Installing latest requirements"
 sudo apt install -y zsh-syntax-highlighting zsh-autosuggestions > /dev/null 2>&1
-sudo mkdir /usr/share/zsh-sudo
-cd /usr/share/zsh-sudo
+sudo mkdir /usr/share/zsh-sudo > /dev/null 2>&1
+cd /usr/share/zsh-sudo 
 sudo wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/sudo/sudo.plugin.zsh > /dev/null 2>&1
 
 echo "[INFO] Updating permissions"
 for file in "${_chmod[@]}"
 do
-    chmod +x "$file"
+    chmod +x "$file" > /dev/null 2>&1
 done
 
 for file in "${_sudo_chmod[@]}"
 do
-    sudo chmod +x "$file"
+    sudo chmod +x "$file" > /dev/null 2>&1
 done
 
 sudo ln -s -fv ~/.zshrc /root/.zshrc > /dev/null 2>&1
